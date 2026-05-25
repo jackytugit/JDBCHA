@@ -12,8 +12,8 @@ import oracle.jdbc.pool.OracleDataSource;
 
 public class TAFDemo
 {
-    //private static final String TAF_URL = "jdbc:oracle:oci:@ftselect";
-    private static final String TAF_URL = "jdbc:oracle:oci:@prmy";
+    private static final String TAF_URL = "jdbc:oracle:oci:@ftselect";
+    //private static final String TAF_URL = "jdbc:oracle:oci:@prmy";
     private static final String USER = "hr";
     private static final String PASSWORD = "oracle_4U";
 

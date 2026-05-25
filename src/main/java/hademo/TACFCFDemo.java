@@ -12,7 +12,7 @@ public class TACFCFDemo
 {
 
     public static void main(String[] args) throws Exception {
-        String serviceName = "acservice";
+        String serviceName = "tacservice";
         String RAC_URL = "jdbc:oracle:thin:@cluster01-scan.example.com:1521/" + serviceName;
 
         String USER = "hr";
@@ -20,7 +20,7 @@ public class TACFCFDemo
         int POOL_SIZE = 1;
 
         PoolDataSource pds = PoolDataSourceFactory.getPoolDataSource();
-        pds.setConnectionPoolName("ACFCFSamplePool");
+        pds.setConnectionPoolName("TACFCFSamplePool");
         pds.setConnectionFactoryClassName("oracle.jdbc.replay.OracleDataSourceImpl");
         pds.setURL(RAC_URL);
         pds.setUser(USER);
@@ -47,7 +47,7 @@ public class TACFCFDemo
                 System.out.println("Shutdown the instance where " + serviceName + " is running");
                 Thread.sleep(30000);
                 conn.commit();
-                System.out.println("AC work completed and committed.");
+                System.out.println("TAC work completed and committed.");
             } catch (SQLException e) {
                 conn.rollback();
                 throw e;
